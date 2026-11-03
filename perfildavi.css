@@ -1,0 +1,194 @@
+
+/* CONFIGURAÇÕES GERAIS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* FUNDO DO SITE */
+body {
+    background-color: #171414;
+
+    background-image:
+        linear-gradient(
+            rgba(15, 10, 10, 0.65),
+            rgba(15, 10, 10, 0.82)
+        ),
+        url("background\ davi.jpg");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+    color: #fffefe;
+    font-family: Arial, sans-serif;
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 25px;
+}
+
+/* CONTEÚDO DO PERFIL */
+.perfil {
+    width: 100%;
+    max-width: 600px;
+    text-align: center;
+    padding: 35px 25px;
+}
+
+/* FOTO DE PERFIL */
+.foto {
+    display: block;
+    width: 300px;
+    height: 300px;
+
+    max-width: 100%;
+    object-fit: cover;
+    object-position: center;
+
+    border-radius: 50%;
+    border: 3px solid #000000;
+
+    margin: 0 auto 22px;
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+/* SOMBRA E AUMENTO DA FOTO */
+.foto:hover {
+    transform: scale(1.04);
+    box-shadow: 0 0 30px #ffffff;
+}
+
+/* TÍTULO */
+h1 {
+    font-size: 34px;
+    margin-bottom: 25px;
+    letter-spacing: 1px;
+}
+
+/* ANIMAÇÃO DE CADA LETRA */
+.letra {
+    display: inline-block;
+    transition:
+        transform 0.2s ease,
+        color 0.2s ease;
+    cursor: default;
+}
+
+.letra:hover {
+    transform: scale(1.4) translateY(-3px);
+    color: #000000;
+}
+
+/* BIOGRAFIA */
+.biografia {
+    color: #fffefe;
+    font-size: 16px;
+    line-height: 1.8;
+    margin-bottom: 22px;
+}
+
+/* INTERESSES */
+.interesses {
+    color: #fffefe;
+    font-size: 14px;
+    line-height: 2;
+    margin-bottom: 30px;
+}
+
+/* BOTÃO DO INSTAGRAM */
+.instagram {
+    display: inline-block;
+
+    background-color: #ffffff;
+    color: #000000;
+
+    text-decoration: none;
+    padding: 13px 25px;
+    border-radius: 8px;
+    font-size: 14px;
+
+    transition:
+        background-color 0.3s ease,
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.instagram:hover {
+    background-color: #ffffff;
+    transform: translateY(-2px) scale(1.05);
+    box-shadow: 0 0 15px rgba(255, 0, 0, 0.4);
+}
+
+/* LINK PARA VOLTAR */
+.voltar {
+    display: block;
+    width: fit-content;
+    margin: 25px auto 0;
+
+    color: #fffefe;
+    text-decoration: none;
+    font-size: 14px;
+
+    transition:
+        color 0.3s ease,
+        transform 0.3s ease;
+}
+
+.voltar:hover {
+    color: #000000;
+    transform: scale(1.08);
+}
+
+/* RODAPÉ */
+footer {
+    margin-top: 40px;
+    color: #fffefe;
+    font-size: 12px;
+}
+
+/* ADAPTAÇÃO PARA CELULARES */
+@media (max-width: 500px) {
+    body {
+        background-attachment: scroll;
+        padding: 15px;
+    }
+
+    .perfil {
+        padding: 20px 10px;
+    }
+
+    .foto {
+        width: 200px;
+        height: 200px;
+    }
+
+    h1 {
+        font-size: 27px;
+    }
+
+    .biografia {
+        font-size: 14px;
+    }
+
+    .interesses {
+        font-size: 13px;
+    }
+}
+
+/* RESPEITA A PREFERÊNCIA POR MENOS ANIMAÇÃO */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        transition: none !important;
+    }
+}
